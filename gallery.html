@@ -1,0 +1,250 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery – Sophie</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gallery.css">
+
+</head>
+
+
+
+<body>
+
+    <audio id="bgMusic" loop>
+    <source src="Kunto Aji  - Hiduplah Sebelum Mati (Official Lyric Video).mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleMusic()" class="music-btn">♫</button>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+if (localStorage.getItem("musicPlaying") === "yes") {
+    music.play();
+}
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        localStorage.setItem("musicPlaying", "yes");
+    } else {
+        music.pause();
+        localStorage.setItem("musicPlaying", "no");
+    }
+}
+
+</script>
+
+
+<h1>My Gallery</h1>
+<p class="subtitle">Memories written softly, one moment at a time </p>
+
+<div class="container">
+<div class="story-grid">
+
+    <!-- Landscape Cards -->
+    <div class="story-card">
+        <img src="mama4.jpg" alt="">
+        <div class="story-text">
+            <h3>Quiet Happiness</h3>
+            <p>Some moments don’t need words. They stay quietly in the heart.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse small">
+        <img src="sophie 14.jpg" alt="">
+        <div class="story-text">
+            <h3>Innocent Beginnings</h3>
+            <p>Every little smile tells a story of wonder and discovery</p>
+        </div>
+    </div>
+
+    <div class="story-card small">
+        <img src="ikram2.jpg" alt="">
+        <div class="story-text">
+            <h3>Milestone Achieved</h3>
+            <p>Hard work and dedication shine brightest on days like this.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse">
+        <img src="bsf3.jpg" alt="">
+        <div class="story-text">
+            <h3>Bond Beyond Words</h3>
+            <p>Some friendships are felt in the heart, not spoken out loud.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse">
+        <img src="sister2.jpg" alt="">
+        <div class="story-text">
+            <h3>Papa’s Embrace</h3>
+            <p>In his arms, we find comfort, love, and a world of safety.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse small">
+        <img src="sophie 3.jpg" alt="">
+        <div class="story-text">
+            <h3>Captured Smiles</h3>
+            <p>Smiles that remind me how far I’ve come.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse">
+        <img src="secondary4.jpg" alt="">
+        <div class="story-text">
+            <h3>Memories in Motion</h3>
+            <p>High school days may pass, but the laughter stays forever.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse small">
+        <img src="opahtokwan 2.jpg" alt="">
+        <div class="story-text">
+            <h3>Timeless Bonds</h3>
+            <p>In quiet smiles and gentle laughter, generations meet and hearts connect.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse small">
+        <img src="ikram3.jpg" alt="">
+        <div class="story-text">
+            <h3>Gentle Connections</h3>
+            <p>Love grows in the spaces where hearts meet and care is shared.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse small">
+        <img src="bsf4.jpg" alt="">
+        <div class="story-text">
+            <h3>Wanderlust & Laughter</h3>
+            <p>Miles of road, endless laughs, and memories in every turn.</p>
+        </div>
+    </div>
+
+    <!-- Portrait Cards -->
+    <div class="story-card reverse portrait">
+        <img src="sophie 2.jpg" alt="">
+        <div class="story-text">
+            <h3>Pure Joy</h3>
+            <p>Some smiles are too big for words, carrying happiness that lights up everything around.</p>
+        </div>
+    </div>
+
+    <div class="story-card portrait">
+        <img src="mama.jpg" alt="">
+        <div class="story-text">
+            <h3>Pink Wishes</h3>
+            <p>Every candle glows brighter when surrounded by love and laughter.</p>
+        </div>
+    </div>
+
+     <div class="story-card reverse portrait">
+        <img src="sophie 8.jpg" alt="">
+        <div class="story-text">
+            <h3>Moment of Achievement</h3>
+            <p>Hard work, dedication, and quiet perseverance reflected in one proud smile.</p>
+        </div>
+    </div>
+
+    <div class="story-card portrait">
+        <img src="opahtokwan3.jpg" alt="">
+        <div class="story-text">
+            <h3>Family Moments</h3>
+            <p>Heartwarming times with my grandparents.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse portrait">
+        <img src="sophie 15.jpg" alt="">
+        <div class="story-text">
+            <h3>Chapter 20</h3>
+            <p>A new decade begins with laughter, love, and unforgettable memories.</p>
+        </div>
+    </div>
+
+    <div class="story-card portrait">
+        <img src="sister3.jpg" alt="">
+        <div class="story-text">
+            <h3>New Beginnings</h3>
+            <p>Every journey starts with a single step, and today marks the start of something bright..</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse portrait">
+        <img src="sophie 16.jpg" alt="">
+        <div class="story-text">
+            <h3>Behind the Lens</h3>
+            <p>Capturing moments, chasing visions, and turning passion into art.</p>
+        </div>
+    </div>
+
+    <div class="story-card portrait">
+        <img src="papa2.jpg" alt="">
+        <div class="story-text">
+            <h3>Anchored in Love</h3>
+            <p>Every hug reminds us where home truly is.</p>
+        </div>
+    </div>
+    
+    <div class="story-card reverse portrait">
+        <img src="sophie 17.jpg" alt="">
+        <div class="story-text">
+            <h3>Freedom at Last</h3>
+            <p>The weight is lifted, the mind is free, and the smile says it all.</p>
+        </div>
+    </div>
+
+    <div class="story-card portrait">
+        <img src="brother2.jpg" alt="">
+        <div class="story-text">
+            <h3>Together Always</h3>
+            <p>In each embrace, we find comfort, laughter, and home.</p>
+        </div>
+    </div>
+
+    <div class="story-card reverse portrait">
+        <img src="opah.jpg" alt="">
+        <div class="story-text">
+            <h3>Sweet Memories</h3>
+            <p>A day to honor her, a lifetime to cherish the love she gives.</p>
+        </div>
+    </div>
+
+     <div class="story-card portrait">
+        <img src="sophie 19.jpg" alt="">
+        <div class="story-text">
+            <h3>Moments Like These</h3>
+            <p>Tiny gestures, endless happiness, and smiles that linger.</p>
+        </div>
+    </div>
+
+</div>
+
+<a href="index.html" class="back-btn">← Back to Home</a>
+</div> <!-- end container -->
+
+
+<script>
+const music = document.getElementById("bgMusic");
+
+if (localStorage.getItem("musicPlaying") === "yes") {
+    music.play();
+}
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        localStorage.setItem("musicPlaying", "yes");
+    } else {
+        music.pause();
+        localStorage.setItem("musicPlaying", "no");
+    }
+}
+
+</script>
+</body>
+</html>

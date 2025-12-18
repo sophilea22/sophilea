@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me – Sophie</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #2F5D3A;
+}
+
+
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+table td {
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-size: 1rem;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table td:first-child {
+    font-weight: 600;
+    width: 40%;
+    color: #2f5d3a;
+}
+
+table td:last-child {
+    color: #4d7c50;
+}
+     body {
+        margin: 0;
+        padding: 120px 20px 40px;
+        font-family: 'Quicksand', sans-serif;
+        background: linear-gradient(135deg, #2F5D3A, #ffeebb, #f7e8c3);
+        background-attachment: fixed;
+        color: #2F5D3A;
+    }
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.35);
+        backdrop-filter: blur(6px);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table td {
+        padding: 12px;
+        border-bottom: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    table tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* BIG FAMILY PHOTO */
+    .big-family {
+        margin: 25px 0 40px;
+        text-align: center;
+    }
+
+    .big-family img {
+        width: 80%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 20px;
+        border: 4px solid #2F5D3A;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .big-family p {
+        margin-top: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    /* FAMILY GRID */
+    .family-section {
+        margin-top: 40px;
+    }
+
+    .family-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .family-center {
+    grid-column: 1 / -1; /* ambil satu row penuh */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.family-center .family-card {
+    max-width: 220px;
+}
+
+
+    .family-card {
+        text-align: center;
+        background: rgba(255,255,255,0.35);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .family-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        border: 3px solid #2F5D3A;
+    }
+
+    .family-card p {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .back-btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 25px;
+        background: #193e19;
+        color: #ebdaaf;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .back-btn:hover {
+        background: #d7ed8a;
+        transform: scale(1.05);
+    }
+
+    .music-btn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#193e19;
+    color:#ebdaaf;
+    border:none;
+    padding:14px 18px;
+    border-radius:50%;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.music-btn:hover{
+    transform:scale(1.1);
+    background:#d7ed8a;
+    color:#193e19;
+}
+
+.experience-section {
+    margin-top: 50px;
+}
+
+.experience-section h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.experience-section h2 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    color: #2f5d3a;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.experience-card {
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(6px);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    text-align: center;
+}
+
+.experience-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 3px solid #2F5D3A;
+}
+
+.experience-card video {
+    width: 100%;
+    max-height: 300px; /* boleh adjust ikut rasa puas hati */
+    object-fit: cover; /* supaya video nampak penuh dan maintain aspect ratio */
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.experience-section {
+    margin-top: 50px;
+}
+
+.experience-section h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.experience-section h2 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    color: #2f5d3a;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.experience-card {
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(6px);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    text-align: center;
+}
+
+.experience-card img, .experience-card video {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 3px solid #2F5D3A;
+    object-fit: cover;
+}
+
+.experience-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.experience-images img {
+    width: calc(90% - 5px);
+    margin-top: 20px;
+}
+
+/* SKILLS SECTION - SIMPLE & CLEAN */
+.skills-box {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+}
+
+.skills-category {
+    flex: 1 1 300px;
+    background: rgba(255,255,255,0.25);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.skills-category h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #2f5d3a;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.skills-grid span {
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.4);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skills-grid span:hover {
+    background: #d7ed8a;
+    color: #193e19;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-box {
+        flex-direction: column;
+    }
+}
+
+/* LIGHTBOX */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* cursor hint */
+.experience-card img {
+    cursor: pointer;
+}
+
+.name-link {
+    cursor: pointer;
+    color: #2F5D3A;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.name-link:hover {
+    color: #193e19;
+}
+
+/* ANIMASI ZOOM IN */
+@keyframes popUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+ </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#family">Family</a>
+    <a href="education.html">Education</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="link.html">Contact</a>
+</nav>
+
+
+    <audio id="bgMusic" loop>
+    <source src="Nadin Amizah - Rumpang [Lirik].mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleMusic()" class="music-btn">♫</button>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+if (localStorage.getItem("musicPlaying") === "yes") {
+    music.play();
+}
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        localStorage.setItem("musicPlaying", "yes");
+    } else {
+        music.pause();
+        localStorage.setItem("musicPlaying", "no");
+    }
+}
+
+
+function openLightbox(img) {
+    document.getElementById("lightbox-img").src = img.src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function openProfile() {
+    document.getElementById("profileLightbox").style.display = "flex";
+}
+
+function closeProfile() {
+    document.getElementById("profileLightbox").style.display = "none";
+}
+
+</script>
+
+
+    <h1 id="about">About Me</h1>
+
+    <div class="container">
+        <p>This page shares a little more about who I am my background, my personal journey, and the pieces of life that shape me.</p>
+<table>
+       <tr>
+    <td><strong>Full Name</strong></td>
+    <td>
+        <span class="name-link" onclick="openProfile()">
+            Nursophilea Harisya binti Mohd Nasrol
+        </span>
+    </td>
+</tr>
+
+    <tr>
+        <td><strong>Nickname</strong></td>
+        <td>Sophie</td>
+    </tr>
+    <tr>
+        <td><strong>Date of Birth</strong></td>
+        <td>January 22, 2005</td>
+    </tr>
+
+    <tr>
+    <td><strong>Place of Birth</strong></td>
+    <td>
+        <a href="https://jknkl.moh.gov.my/hpj/ms/" target="_blank" style="color:#2F5D3A; text-decoration: underline;">
+            Hospital Putrajaya
+        </a>
+    </td>
+</tr>
+
+
+    <tr>
+        <td><strong>Hometown</strong></td>
+        <td>Bangi, Selangor</td>
+    </tr>
+    <tr>
+        <td><strong>Education</strong></td>
+        <td>Current: Diploma in Information Management, UiTM Kampus Segamat</td>
+    </tr>
+    <tr>
+        <td><strong>Personality</strong></td>
+        <td>Introvert, gentle, observant</td>
+    </tr>
+    <tr>
+        <td><strong>Current Journey</strong></td>
+        <td>Healing, studying & exploring</td>
+    </tr>
+    <tr>
+        <td><strong>Hobbies</strong></td>
+        <td>Watching movies, designing, journaling</td>
+    </tr>
+</table>
+
+<!-- SKILLS SECTION -->
+<div class="skills-section" id="skills">
+    <h1>My Skills</h1>
+
+    <div class="skills-box">
+        <!-- Hard Skills -->
+        <div class="skills-category">
+            <h2>Hard Skills</h2>
+            <div class="skills-grid">
+                <span>Microsoft Office</span>
+                <span>Google Workspace</span>
+                <span>Programming / Coding</span>
+                <span>Data Analysis</span>
+                <span>Graphic Design</span>
+                <span>Social Media Management</span>
+                <span>Project Management Tools</span>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-category">
+            <h2>Soft Skills</h2>
+            <div class="skills-grid">
+                <span>Communication</span>
+                <span>Teamwork</span>
+                <span>Time Management</span>
+                <span>Problem Solving</span>
+                <span>Adaptability</span>
+                <span>Critical Thinking</span>
+                <span>Leadership</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EXPERIENCE SECTION -->
+<div class="experience-section">
+    <h1>My Experience</h1>
+    <div class="experience-section" id="experience">
+
+    <!-- CLUB / VOLUNTEER EXPERIENCE -->
+    <h2>Club & Volunteer</h2>
+    <div class="experience-grid">
+        <!-- Mahasiswa Sungai -->
+        <div class="experience-card">
+            <p><strong>Mahasiswa Prihatin Selamatkan Sungai, Tanjung Mas, Muar </strong></p>
+            <div class="experience-images">
+                <img src="sungai muar.jpg" alt="Mahasiswa Sungai 1" onclick="openLightbox(this)">
+                <img src="sungai muae 2.jpg" alt="Mahasiswa Sungai 2" onclick="openLightbox(this)">
+            </div>
+        </div>
+
+        <!-- Komuniti Serai Lestari -->
+        <div class="experience-card">
+            <p><strong>Komuniti Serai Lestari, UiTM Segamat</strong></p>
+            <div class="experience-images">
+                <img src="serai.jpg" alt="Komuniti Serai 1" onclick="openLightbox(this)">
+                <img src="serai2.jpg" alt="Komuniti Serai 2" onclick="openLightbox(this)">
+            </div>
+        </div>
+
+        <!-- Mushroom Insight -->
+        <div class="experience-card">
+            <p><strong>Mushroom Insight, Nadia Agrofarm, Muar</strong></p>
+            <div class="experience-images">
+                <img src="mushroom2.jpg" alt="Mushroom Insight 1" onclick="openLightbox(this)">
+                <img src="mushroom3.jpg" alt="Mushroom Insight 2" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERNSHIP EXPERIENCE -->
+    <h2>Internship</h2>
+    <div class="experience-grid">
+        <!-- PKNS -->
+        <div class="experience-card">
+            <p><strong>PKNS Andaman Development SDN BHD</strong></p>
+            <img src="intern3.jpg" alt="PKNS Andaman">
+        </div>
+
+        <!-- EVO Mall -->
+        <div class="experience-card">
+            <p><strong>EVO Mall, Bandar Baru Bangi</strong></p>
+            <img src="intern6.jpg" alt="EVO Mall">
+        </div>
+    </div>
+
+    <!-- SHOOTING / ASSIGNMENT EXPERIENCE -->
+    <h2>Shooting & Assignments</h2>
+    <div class="experience-grid">
+        <!-- Melaka Straits Cultural Museum -->
+        <div class="experience-card">
+            <p><strong>Melaka Straits Cultural Museum</strong></p>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Arkib Negara Malaysia -->
+        <div class="experience-card">
+            <p><strong>Arkib Negara Malaysia</strong></p>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Final Year Project -->
+        <div class="experience-card">
+            <p><strong>Final Year Project di ADTEC JTM Kampus Tangkak</strong></p>
+            <img src="ILP.jpg" alt="FYP ADTEC">
+        </div>
+    </div>
+</div>
+
+        <!-- FAMILY SECTION -->
+        <div class="family-section">
+
+         <h1>My Family</h1>
+         <div class="family-section" id="family">
+
+         <div class="big-family">
+    <img src="family.jpg" alt="My Family">
+    <p> </p>
+</div>
+
+            <div class="family-grid">
+                <div class="family-card">
+                    <img src="papa.jpg" alt="Papa">
+                    <p>Papa </p>
+                </div>
+
+                <div class="family-card">
+                    <img src="mama2.jpg" alt="Mama">
+                    <p>Mama </p>
+                </div>
+
+                <div class="family-card">
+                    <img src="brother.jpg" alt="Brother">
+                    <p>Abang </p>
+                </div>
+
+                <div class="family-card">
+                    <img src="sister.jpg" alt="Sister">
+                    <p>Adiera </p>
+                </div>
+
+                <div class="family-center">
+        <div class="family-card">
+            <img src="adik2.jpg" alt="Baby Brother">
+            <p>Adik</p>
+        </div>
+
+        <div class="family-card">
+            <img src="opahtokwan.jpg" alt="Grandparents">
+            <p>Opah & Tokwan</p>
+        </div>
+    </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    <!-- IMAGE LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<div id="profileLightbox" onclick="closeProfile()" style="
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;  /* <-- tukar sini */
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+    z-index: 9999;
+">
+    <img src="sophie 10.jpg" style="
+        max-width: 40%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    ">
+</div>
+
+</body>
+</html>

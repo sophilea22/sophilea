@@ -1,229 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Page – Sophie</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome — Sophie</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<!-- Google Font (optional tapi digalakkan) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
 
-    <style>
-        html, body {
-    min-height: 100vh; /* pastikan page minimum tinggi viewport */
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    background: #f0ebcc;
-    color: #2F5D3A;
-}
-
-        /* HEADER / INTRO */
-        header {
-    flex: 1; /* header akan occupy ruang yang ada */
-    background:
-    linear-gradient(rgba(177, 227, 154, 0.45), rgba(222, 221, 141, 0.45)),
-    url("wallpaper 5.jpg") center/cover no-repeat;
-    text-align: center;
-    padding: 60px 20px;
-    box-sizing: border-box;
-}
-
-header h1,
-header p {
-    color: #284a2c; /* soft yellow */
-}
-
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.3rem;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-
-        .profile-img {
-            width: 220px;
-            height: 210px;
-            object-fit: cover;
-            border-radius: 15px;
-            border: 4px solid #89C27B;
-            display: block;
-            margin: 0 auto 30px auto;
-        }
-
-        .intro-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        .intro-container p {
-            margin: 0 0 20px 0;
-        }
-
-        /* Navigation Buttons */
-        .nav-buttons {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .button-nav {
-            display: inline-block;
-            margin: 8px 10px;
-            padding: 12px 25px;
-            background-color: #2F5D3A;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .button-nav:hover {
-            background-color: #3E7A48;
-            transform: scale(1.05);
-        }
-
-        footer {
-    background: #2F5D3A;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto; /* buat footer sentiasa di bawah */
-}
-
-        .music-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #2F5D3A;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    font-size: 22px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.music-btn:hover {
-    background: #3E7A48;
-    transform: scale(1.1);
-}
-
-#typing-text {
-    border-right: 2px solid #284a2c; /* cursor warna hijau gelap */
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-}
-
-    </style>
+<!-- CSS External -->
+<link rel="stylesheet" href="introduction.css">
 </head>
 
-    <!-- INTRO / HEADER -->
-    <header>
-    <h1>My Corner of Introduction</h1>
-    <p id="typing-text"></p>
-    
-        <img src="sophie 5.jpg" alt="Sophie Profile" class="profile-img">
-        <div class="intro-container">
-            <p>
-                I am Nursophilea, but most people call me Sophie, a quiet soul who loves observing the world from behind gentle thoughts. I’ve always believed that every person carries their own silent battles, and mine have shaped me into someone who learns, unlearns, and grows every single day. I don’t rush life; I let it unfold, moment by moment, lesson by lesson.
-            </p>
-            <p>
-                My principle is simple: choose kindness, even when it feels heavy. I hold onto the belief that the heart heals in waves sometimes soft, sometimes overwhelming but always moving forward. I let myself feel deeply because I know emotions are not weaknesses; they are proof that I’m alive, present, and human.
-            </p>
-            <p>
-                I’m inspired by quiet resilience: people who fall but rise again, the kind of strength that doesn’t shout but stays steady. I’m inspired by growth, by soft mornings, by the way small actions can change a person’s day. I love stories, small moments, and the feeling of learning something new every day.
-            </p>
-            <p>
-                Right now, I’m on a journey of becoming balancing studies, and healing. I’m learning to protect my peace, appreciate progress, and build a life that feels gentle yet meaningful. I’m not done growing. I’m just getting started.
-            </p>
-        </div>
+<body>
 
-        <!-- Navigation Buttons -->
-        <div class="nav-buttons">
-            <a href="aboutme.html" class="button-nav">About Me</a>
-            <a href="education.html" class="button-nav">Education</a>
-            <a href="gallery.html" class="button-nav">Gallery</a>
-            <a href="link.html" class="button-nav">Useful Links</a>
-        </div>
-    </header>
+<!-- Video Background -->
+<video autoplay muted loop id="bgVideo">
+    <source src="video 6.mp4" type="video/mp4">
+</video>
 
-<footer>
-    © 2025 Sophie’s
-</footer>
-
-
-<audio id="bgMusic" loop>
-    <source src="Kunto Aji - Pilu Membiru (Official Audio).mp3" type="audio/mpeg">
-</audio>
-
-<button class="music-btn" onclick="toggleMusic()">♫</button>
+<!-- Date & Time -->
+<p id="dateTime"></p>
 
 <script>
-const music = document.getElementById("bgMusic");
-
-function toggleMusic() {
-    if (music.paused) {
-        music.play();
-        localStorage.setItem("musicPlaying", "yes");
-    } else {
-        music.pause();
-        localStorage.setItem("musicPlaying", "no");
+/* ---------- DATE & TIME ---------- */
+function getOrdinal(day) {
+    if (day > 3 && day < 21) return 'th';
+    switch (day % 10) {
+        case 1: return 'st';
+        case 2: return 'nd';
+        case 3: return 'rd';
+        default: return 'th';
     }
 }
 
-window.addEventListener("load", () => {
-    if (localStorage.getItem("musicPlaying") === "yes") {
-        music.play();
-    }
-});
-</script>
+function updateDateTime() {
+    const now = new Date();
 
-<script>
-const text = "Stories, passions, and pieces of me";
-const typingElement = document.getElementById("typing-text");
-let i = 0;
-let forward = true;
+    const weekday = now.toLocaleDateString('en-US', { weekday: 'long' });
+    const month = now.toLocaleDateString('en-US', { month: 'long' });
+    const year = now.getFullYear();
+    const day = now.getDate();
+    const ordinal = getOrdinal(day);
 
-function loopTyping() {
-    if (forward) {
-        if (i < text.length) {
-            typingElement.innerHTML += text.charAt(i);
-            i++;
-        } else {
-            forward = false;
-            setTimeout(loopTyping, 1500); // tunggu 1.5s sebelum delete
-            return;
-        }
-    } else {
-        if (i > 0) {
-            typingElement.innerHTML = text.substring(0, i-1);
-            i--;
-        } else {
-            forward = true;
-        }
-    }
-    setTimeout(loopTyping, 100);
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    let seconds = now.getSeconds().toString().padStart(2, '0');
+
+    document.getElementById('dateTime').innerHTML =
+        `${weekday}, ${day}<sup>${ordinal}</sup> ${month} ${year} — ${hours}:${minutes}:${seconds}`;
 }
 
-window.addEventListener("load", loopTyping);
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
+
+/* 🚪 ENTER PAGE */
+function enterPage() {
+    window.location.href = "introduction.html";
+}
+
 </script>
+
+<!-- Main Box -->
+<div class="box">
+    <h1>Welcome</h1>
+    <p>Click the button to enter my webpage</p>
+    <button class="enter-btn" onclick="enterPage()">Enter</button>
+</div>
+
 
 </body>
 </html>
+
+
